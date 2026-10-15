@@ -1,5 +1,24 @@
 ### Jubler Changelog
 
+#### 11.0.0
+
+- Jubler is rewritten in C++ with Qt 6: a native application on Windows, macOS and Linux, with no Java runtime
+- Video preview, audio waveform and key frames through libmpv, with hardware decoding and native Wayland support; VLC no longer has to be installed
+- Subtitle downloader: search and fetch subtitles from OpenSubtitles, SubDL and SubSource, with video-hash matching and TV-episode support
+- Import of the text subtitles embedded in video files
+- New Hunspell spell checker replacing aspell, with a bundled English dictionary and on-demand downloads for other languages; reworked check dialog and an up-front language bar with a language manager
+- Post-load encoding/FPS/format bar that auto-detects the character set on every load and becomes the single place to change encoding, frame rate and subtitle format
+
+#### 10.0.0
+
+- Replaced the aging MPlayer and ffdecode/ffmpeg components with VLC (libvlc) for video preview, frame preview, audio waveform, media metadata and sample-exact snippet playback
+- Native Apple Silicon (arm64) support — no Rosetta required, future-proof against Apple dropping Rosetta 2
+- Modern codec and container support across Windows, macOS and Linux
+- External tool integration: run command-line tools — AI transcription (whisper / faster-whisper / whisper.cpp), subtitle sync and more — directly on your subtitles, audio or video, via configurable recipes
+- Numerous stability fixes across Windows, macOS and Linux
+- Create a new subtitle project directly from a video file
+- Audio-only media supported in preview
+
 #### 9.0.1
 
 Fix SRT subtitle save, when styles are present
